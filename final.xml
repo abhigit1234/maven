@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="abhi">
+	<listeners>
+		<listener class-name="practice.BaseListener" />
+	</listeners>
+	<test name="TestGoogle">
+		<parameter name="author" value="abhilash" />
+		<parameter name="browserName" value="chrome" />
+		<parameter name="url" value="https://www.google.com" />
+		<classes>
+			<class name="practice.BaseMethod">
+				<methods>
+					<include name="Google" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="TestOrangeHrm">
+			<parameter name="author" value="ayaansh" />
+		<parameter name="browserName" value="firefox" />
+		<parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+		<classes>
+			<class name="practice.BaseMethod">
+				<methods>
+					<include name="OrangeHrm" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>
