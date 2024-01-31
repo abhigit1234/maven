@@ -15,7 +15,7 @@ public class Add_Extensions {
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://www.google.com");
 	
-		
+		System.out.println("hello");
 	
 	
 	
