@@ -1,4 +1,4 @@
-package Utilities;
+package demo;
 
 import static org.testng.Assert.assertTrue;
 
