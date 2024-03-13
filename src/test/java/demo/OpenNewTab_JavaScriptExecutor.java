@@ -1,4 +1,4 @@
-package Demo;
+package demo;
 
 import java.time.Duration;
 import java.util.Iterator;
