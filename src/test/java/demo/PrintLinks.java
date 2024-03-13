@@ -12,7 +12,7 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 
 
-public class alllinksprinting {
+public class PrintLinks {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
