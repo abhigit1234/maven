@@ -11,7 +11,7 @@ public class Add_Extensions {
 	public static void main(String[] args) throws IOException {
 
 		ChromeOptions opt = new ChromeOptions();
-		opt.addExtensions(new File("C:\\Users\\tubby\\Desktop\\Extensions\\SelectorsHub 5.1.3.0.crx"),new File("C:\\Users\\tubby\\Desktop\\Extensions\\Chropath.crx"));
+		opt.addExtensions(new File("C:\\Users\\abhil\\OneDrive\\Desktop\\Extensions\\SelectorsHub 5.1.3.0.crx"),new File("C:\\Users\\abhil\\OneDrive\\Desktop\\Extensions\\Chropath.crx"));
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://www.google.com");
 	
