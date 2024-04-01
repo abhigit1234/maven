@@ -25,26 +25,16 @@ public class FileUpload {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.foundit.in/");
-//=======================================================================================//
-		// if html page has (type=file) attribute we can use this method
-		//	driver.findElement(By.xpath("//div[contains(text(),'Upload Resume')]")).click();
-		//	driver.findElement(By.id("file-upload")).sendKeys("C:\\Users\\tubby\\Desktop\\PERSONAL\\Resume.doc");
-//===========================================================================================//		
-		 driver.findElement(By.xpath("//div[contains(text(),'Upload Resume')]")).click();
-		 WebElement ele = driver.findElement(By.id("file-upload"));
-			/*
-			 * JavascriptExecutor jse = (JavascriptExecutor)driver;
-			 * jse.executeScript("arguments[0].click()", ele);
-			 */
-		 Actions a = new Actions(driver);
-		 a.click(ele).perform();
-		 
+		driver.get("https://easyupload.io/");
+
+		driver.findElement(By.xpath("//button[@class='dz-button']")).click();
+
+		StringSelection ss = new StringSelection("C:\\Users\\tubby\\Desktop\\PERSONAL\\manualresume.docx");
+		Toolkit.getDefaultToolkit().getSystemClipboard().getContents(ss);
+		
 		Robot rb = new Robot();
 		rb.delay(2000);
 		
-		StringSelection ss = new StringSelection("C:\\Users\\tubby\\Desktop\\PERSONAL\\manualresume.docx");
-		Toolkit.getDefaultToolkit().getSystemClipboard().getContents(ss);
 		
 		rb.keyPress(KeyEvent.VK_CONTROL);
 		rb.keyPress(KeyEvent.VK_V);
