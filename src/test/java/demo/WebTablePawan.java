@@ -42,16 +42,13 @@ public class WebTablePawan {// goibibo site lo ::before ::after
 					driver.findElement(By.xpath("//li[@class='page-item active']/span")));
 			rowNames = driver.findElements(By.xpath("//div[@id='customer']//table/tbody/tr/td[2]"));
 			names = new ArrayList<String>();
-			try {
+			
 				for (WebElement name : rowNames) {
 					names.add(name.getText());
 				}
 				for (String name : names) {
 					System.out.println(name);
 				}
-			} catch (Exception e) {
-
-			}
 
 			
 			Actions a = new Actions(driver);
