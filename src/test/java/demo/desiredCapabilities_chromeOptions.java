@@ -26,7 +26,7 @@ public class desiredCapabilities_chromeOptions {
 		//InsecureCerts 
 		//driver.get("https://www.cacert.com");
 		
-		driver.get("https://optinmonster.com/types-of-popups-for-your-site/");
+		driver.get("https://www.accuweather.com/en/in/hyderabad/202190/weather-forecast/202190");
 		System.out.println(driver.getTitle());
 	
 	}
