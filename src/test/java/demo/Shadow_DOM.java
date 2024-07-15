@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class demo {
+public class Shadow_DOM {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws Exception {
