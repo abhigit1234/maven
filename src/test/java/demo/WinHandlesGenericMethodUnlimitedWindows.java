@@ -39,4 +39,18 @@ public class WinHandlesGenericMethodUnlimitedWindows {
 			}
 		}return false;
 	}
+	
 }
+
+/*	// Normal Method
+	Set<String> wh = driver.getWindowHandles();
+	
+	List<String> list = new ArrayList<String>(wh);
+	for (String s : list) {
+		String t = driver.switchTo().window(s).getTitle();
+		if(t.contains("Facebook")) {
+			driver.switchTo().window(t);
+		}
+	
+	}
+	*/
