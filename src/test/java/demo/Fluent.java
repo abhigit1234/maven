@@ -1,14 +1,8 @@
 package demo;
 
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
-
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,15 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
-
 public class Fluent {
 
 	public static void main(String[] args) {
 		
 	
-		WebDriverManager.chromedriver().setup();
+		
 		ChromeDriver driver = new ChromeDriver();
 
 		driver.get("https://www.ebay.com");

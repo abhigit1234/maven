@@ -1,17 +1,11 @@
 package demo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
-
-
-
-import org.openqa.selenium.By;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class launch {
 	public static WebDriver driver;
@@ -19,10 +13,10 @@ public class launch {
 
 	public static void main(String[] args) {
 		if (browser.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+		
 			driver = new ChromeDriver();
 		} else if (browser.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		
 			driver = new FirefoxDriver();
 		}
 		driver.get("https://www.blazedemo.com/login");

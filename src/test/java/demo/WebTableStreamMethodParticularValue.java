@@ -1,8 +1,5 @@
 package demo;
 
-import static org.testng.Assert.assertEquals;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,14 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class WebTableStreamMethodParticularValue {
 	WebDriver driver;
 
 	@Test
 	public void webtable() {
-		WebDriverManager.chromedriver().setup();
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://datatables.net/examples/advanced_init/dt_events.html");
 

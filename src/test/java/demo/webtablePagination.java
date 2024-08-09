@@ -2,25 +2,17 @@ package demo;
 
 
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class webtablePagination {
 
 	
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://mdbootstrap.com/docs/b4/jquery/tables/pagination/");
 

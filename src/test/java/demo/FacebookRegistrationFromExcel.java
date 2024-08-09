@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -15,13 +13,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class FacebookRegistrationFromExcel {
 	public static WebDriver driver;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		
 		driver = new ChromeDriver();
 
 		FileInputStream fis = new FileInputStream("C:\\Users\\tubby\\eclipse-workspace\\excel\\facebook.xlsx");
