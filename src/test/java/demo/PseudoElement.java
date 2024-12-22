@@ -1,10 +1,7 @@
 package demo;
 
-
 import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,18 +12,29 @@ public class PseudoElement {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://play1.automationcamp.ir/advanced.html");
-		
-		String s = ((JavascriptExecutor)driver).executeScript("return window.getComputedStyle(document.querySelector('.star-rating'),'::after').getPropertyValue('content')").toString();
-		System.out.println(s); 
-		
-		String s1 = s.replaceAll("\"", "");
-		System.out.println(s1);
-		driver.findElement(By.id("txt_rating")).sendKeys(s1);
-		driver.findElement(By.id("check_rating")).click();
-		System.out.println(driver.findElement(By.id("validate_rating")).getText());
-		//driver.close();
-	
+		driver.get("http://localhost:90/opencart/upload/index.php?route=account/register&language=en-gb");
+
+		// =====single star
+
+		/*
+		 * System.out.println(((JavascriptExecutor) driver).executeScript(
+		 * "return window.getComputedStyle(arguments[0],'::Before').getPropertyValue('content')"
+		 * ,
+		 * driver.findElement(By.xpath("//label[@for='input-firstname']"))).toString());
+		 */
+//===================================================================================		
+		// =====multiple stars
+
+		/*
+		 * List<WebElement> list =
+		 * driver.findElements(By.xpath("//form[@id='form-register']//label")); for
+		 * (WebElement e : list) { System.out.println(((JavascriptExecutor)
+		 * driver).executeScript(
+		 * "return window.getComputedStyle(arguments[0],'::Before').getPropertyValue('content')"
+		 * , e)); }
+		 */
+		driver.close();
+
 	
 		
 	}
